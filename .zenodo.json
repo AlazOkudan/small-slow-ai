@@ -1,0 +1,10 @@
+{
+  "title": "Small and slow AI: an interactive chart",
+  "description": "An interactive chart placing small, local and slow AI projects by scale and pace.",
+  "upload_type": "software",
+  "creators": [
+    { "name": "Okudan, Alaz", "affiliation": "University of Galway" }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": ["small AI", "slow AI", "artistic research"]
+}
