@@ -49,6 +49,7 @@ ul.cr li{break-inside:avoid;margin-bottom:.35rem}
 .nc{display:grid;grid-template-columns:1fr auto auto;gap:.7rem;align-items:end;grid-column:1/-1}
 input[type=color]{width:48px;height:36px;padding:2px;border:2px solid var(--line);border-radius:0;background:var(--field);cursor:pointer}
 @media (prefers-reduced-motion:reduce){button{transition:none}}
+.cite{max-width:68ch;margin:.8rem 0 1rem;padding:1rem 1.2rem;border:2px dashed var(--line);background:var(--surface);font-size:.95rem;overflow-wrap:anywhere}
 </style>
 </head>
 <body>
@@ -91,6 +92,19 @@ input[type=color]{width:48px;height:36px;padding:2px;border:2px solid var(--line
 </div>
 </div>
 
+<h2>Cite this project</h2>
+<p>To cite this project, use the following format.</p>
+<p class="cite" id="cite">Okudan, A. (2026). Small and slow AI: an interactive chart (Version v1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24093484</p>
+<button type="button" id="copycite" aria-live="polite">Copy citation</button>
+<script>
+document.getElementById('copycite').addEventListener('click',function(){
+var b=this,el=document.getElementById('cite');
+(navigator.clipboard?navigator.clipboard.writeText(el.textContent.trim()):Promise.reject()).then(
+function(){b.textContent='Copied'},
+function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, now copy'});
+setTimeout(function(){b.textContent='Copy citation'},2500)});
+</script>
+  
 <h2>How to read the chart</h2>
 <dl>
 <dt>Dot</dt><dd>Where most of a project's time and effort sits.</dd>
